@@ -77,13 +77,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ResultOutput.cpp" />
+    <ClCompile Include="src\CmdLineArgumentParser.cpp" />
     <ClCompile Include="src\AnalysisObjectManager.cpp" />
     <ClCompile Include="src\InputFileParser.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ResultOutput.h" />
+    <ClInclude Include="src\CmdLineArgumentParser.h" />
     <ClInclude Include="src\AnalysisObjectManager.h" />
+    <ClInclude Include="src\Common\ErrorHandler.h" />
     <ClInclude Include="src\Common\ObjectBase.h" />
+    <ClInclude Include="src\Common\UtilityFunctions.h" />
     <ClInclude Include="src\InputFileParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

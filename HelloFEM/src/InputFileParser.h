@@ -24,3 +24,11 @@ public:
     void CloseInputFile() { m_Fin.close(); }
     void ReadInputFile(AnalysisObjectManager& anaObjMgr, ResultOutput* pResOut);
 };
+
+class ABAQUSInputFileParser : public InputFileParser
+{
+public:
+    ABAQUSInputFileParser(const std::string& fin): InputFileParser(fin) {}
+
+    void ReadInput(AnalysisObjectManager& anaObjMgr, ResultOutput* pResOut) override {}
+};
