@@ -27,8 +27,20 @@ public:
 
 class ABAQUSInputFileParser : public InputFileParser
 {
+private:
+    int m_Dim;
+    int m_Level;
+    int m_LineNumber;
+    bool m_InitKeyword;
+    bool m_HyperFlag;
+    bool m_IsComp;
+
 public:
-    ABAQUSInputFileParser(const std::string& fin): InputFileParser(fin) {}
+    ABAQUSInputFileParser(const std::string& fin)
+        : InputFileParser(fin) 
+    {
+
+    }
 
     void ReadInput(AnalysisObjectManager& anaObjMgr, ResultOutput* pResOut) override {}
 };
