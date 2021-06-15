@@ -1,6 +1,7 @@
+#include "pch.h"
 #include "CmdLineArgumentParser.h"
-#include "Common/ErrorHandler.h"
-#include "Common/UtilityFunctions.h"
+#include "ErrorHandler.h"
+#include "UtilityFunctions.h"
 
 #include <algorithm>
 

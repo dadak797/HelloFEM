@@ -1,8 +1,9 @@
+#include "pch.h"
 #include "AnalysisObjectManager.h"
-#include "Common/ObjectBase.h"
+#include "ObjectBase.h"
 #include "CmdLineArgumentParser.h"
 #include "ResultOutput.h"
-#include "InputFileParser.h"
+#include "ABAQUSInputFileParser.h"
 
 
 int IDState::s_State = IDState::USE_NUM_ID;

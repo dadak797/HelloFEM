@@ -56,6 +56,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -69,6 +72,9 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,20 +83,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\ResultOutput.cpp" />
+    <ClCompile Include="src\Element\Element.cpp" />
+    <ClCompile Include="src\Analysis\Analysis.cpp" />
+    <ClCompile Include="src\Analysis\AnalysisLinker.cpp" />
+    <ClCompile Include="src\Input\ABAQUSInputFileParser.cpp" />
+    <ClCompile Include="src\Input\ABAQUSInputModule.cpp" />
+    <ClCompile Include="src\Input\ABAQUSInputObject.cpp" />
+    <ClCompile Include="src\Input\ABAQUSInputObjectManager.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\Analysis\ResultOutput.cpp" />
     <ClCompile Include="src\CmdLineArgumentParser.cpp" />
-    <ClCompile Include="src\AnalysisObjectManager.cpp" />
-    <ClCompile Include="src\InputFileParser.cpp" />
+    <ClCompile Include="src\Input\AnalysisObjectManager.cpp" />
+    <ClCompile Include="src\Input\InputFileParser.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ResultOutput.h" />
+    <ClInclude Include="src\Element\Element.h" />
+    <ClInclude Include="src\Analysis\Analysis.h" />
+    <ClInclude Include="src\Analysis\AnalysisLinker.h" />
+    <ClInclude Include="src\Input\ABAQUSInputFileParser.h" />
+    <ClInclude Include="src\Input\ABAQUSInputModule.h" />
+    <ClInclude Include="src\Input\ABAQUSInputObject.h" />
+    <ClInclude Include="src\Input\ABAQUSInputObjectManager.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\Analysis\ResultOutput.h" />
     <ClInclude Include="src\CmdLineArgumentParser.h" />
-    <ClInclude Include="src\AnalysisObjectManager.h" />
+    <ClInclude Include="src\Input\AnalysisObjectManager.h" />
     <ClInclude Include="src\Common\ErrorHandler.h" />
     <ClInclude Include="src\Common\ObjectBase.h" />
     <ClInclude Include="src\Common\UtilityFunctions.h" />
-    <ClInclude Include="src\InputFileParser.h" />
+    <ClInclude Include="src\Input\InputFileParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
