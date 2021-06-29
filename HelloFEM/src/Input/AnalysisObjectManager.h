@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AnalysisLinker.h"
+#include "Node.h"
 
 
 template <typename ObjType>
@@ -37,4 +38,5 @@ class AnalysisObjectManager
 {
 private:
     AnalysisLinker m_AnalysisLinker;
+    ObjectContainer<Node> m_Nodes;
 };

@@ -9,5 +9,6 @@
 #include <functional>
 #include <list>
 
-#include "Common/ObjectBase.h"
-#include "Common/UtilityFunctions.h"
+#include <cassert>
+#include <utility>
+#include <algorithm>
