@@ -1,8 +1,10 @@
 #pragma once
-#include <fstream>
+
+#include "ErrorHandler.h"
 
 class AnalysisObjectManager;
 class ResultOutput;
+
 
 class InputFileParser 
 {
@@ -23,24 +25,4 @@ public:
     void OpenInputFile(const std::string& fin);
     void CloseInputFile() { m_Fin.close(); }
     void ReadInputFile(AnalysisObjectManager& anaObjMgr, ResultOutput* pResOut);
-};
-
-class ABAQUSInputFileParser : public InputFileParser
-{
-private:
-    int m_Dim;
-    int m_Level;
-    int m_LineNumber;
-    bool m_InitKeyword;
-    bool m_HyperFlag;
-    bool m_IsComp;
-
-public:
-    ABAQUSInputFileParser(const std::string& fin)
-        : InputFileParser(fin) 
-    {
-
-    }
-
-    void ReadInput(AnalysisObjectManager& anaObjMgr, ResultOutput* pResOut) override {}
 };

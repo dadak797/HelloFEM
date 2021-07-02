@@ -12,7 +12,7 @@ public:
     ObjectBase(int ID = 0): m_ID(ID) {}
     virtual ~ObjectBase() {}
 
-    virtual ObjectBase* CreateNewObj(bool copyFlag = true) = 0;
+    virtual ObjectBase* NewObj(bool copyFlag = true) = 0;
     virtual int OrgID() const { return m_ID; }  // Mapping ID to original ID
 
     void SetID(int ID) { m_ID = ID; }

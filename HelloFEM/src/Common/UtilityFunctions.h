@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 
 inline std::string GetExtension(const std::string& fn)
 {
