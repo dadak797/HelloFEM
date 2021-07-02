@@ -29,7 +29,7 @@ private:
 };
 
 
-union IDObj  // How about change union to class?
+union IDObj  // Why union?
 {
 private:
     int m_IDNum;
