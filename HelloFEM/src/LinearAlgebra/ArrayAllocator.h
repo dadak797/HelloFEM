@@ -20,7 +20,7 @@ protected:
 
     DynamicAllocator(DataType* data, int ID)
     {
-        assert(false);
+        static_assert(false);
     }
 
     void Swap(DynamicAllocator& other)
@@ -53,8 +53,8 @@ protected:
     enum { DEFAULT_SIZE = 0, DEFAULT_ROWS = 0, DEFAULT_COLUMNS = 0 };
 
 public:
-    // typedef DataType MemberType;
-    using MemberType = DataType;
+    typedef DataType MemberType;
+    //using MemberType = DataType;
     DataType* Data(int idx = 0) { return m_Data + idx; }
     const DataType* Data(int idx = 0) const { return m_Data + idx; }
 };
@@ -78,12 +78,12 @@ protected:
 
     StaticAllocator(DataType* data, int ID)
     {
-        assert(false);
+        static_assert(false);
     }
 
     void Allocate(int size) 
     { 
-        assert(size <= N); 
+        static_assert(size <= N); 
     }
 
     void DeAllocate()
@@ -101,8 +101,8 @@ protected:
     enum { DEFAULT_SIZE = N };
 
 public:
-    // typedef DataType MemberType;
-    using MemberType = DataType;
+    typedef DataType MemberType;
+    //using MemberType = DataType;
     DataType* Data(int idx = 0) { return m_Data + idx; }
     const DataType* Data(int idx = 0) const { return m_Data + idx; }
 };

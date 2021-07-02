@@ -2,6 +2,7 @@
 #include "CmdLineArgumentParser.h"
 #include "ErrorHandler.h"
 #include "UtilityFunctions.h"
+#include "GPU_BLAS_Interface.h"
 
 #include <algorithm>
 
@@ -126,7 +127,7 @@ int CmdLineArgumentParser::ProcessOptions(char option, char* argv)
     };
 
     // Set Number of Threads
-    //BLAS_Interface::set_num_threads(nt);
+    BLAS_Interface::set_num_threads(nt);
     return i;
 }
 

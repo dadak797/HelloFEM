@@ -58,7 +58,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element;$(ProjectDir)src\Etc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element;$(ProjectDir)src\Etc;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.0.166\windows\mkl\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -74,7 +74,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element;$(ProjectDir)src\Etc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Common;$(ProjectDir)src\Input;$(ProjectDir)src;$(ProjectDir)src\Analysis;$(ProjectDir)src\Element;$(ProjectDir)src\Etc;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.0.166\windows\mkl\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +90,7 @@
     <ClCompile Include="src\Input\ABAQUSInputModule.cpp" />
     <ClCompile Include="src\Input\ABAQUSInputObject.cpp" />
     <ClCompile Include="src\Input\ABAQUSInputObjectManager.cpp" />
+    <ClCompile Include="src\LinearAlgebra\BLAS_Interface.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
@@ -113,6 +114,8 @@
     <ClInclude Include="src\Input\ABAQUSInputObject.h" />
     <ClInclude Include="src\Input\ABAQUSInputObjectManager.h" />
     <ClInclude Include="src\LinearAlgebra\ArrayAllocator.h" />
+    <ClInclude Include="src\LinearAlgebra\BLAS_Interface.h" />
+    <ClInclude Include="src\LinearAlgebra\GPU_BLAS_Interface.h" />
     <ClInclude Include="src\LinearAlgebra\Vector.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\Analysis\ResultOutput.h" />

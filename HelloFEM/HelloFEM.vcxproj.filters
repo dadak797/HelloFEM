@@ -54,6 +54,9 @@
     <ClCompile Include="src\Element\Element.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="src\LinearAlgebra\BLAS_Interface.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Common\ObjectBase.h">
@@ -111,6 +114,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="src\LinearAlgebra\ArrayAllocator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LinearAlgebra\GPU_BLAS_Interface.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LinearAlgebra\BLAS_Interface.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
