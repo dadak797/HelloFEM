@@ -20,7 +20,7 @@ protected:
 
     DynamicAllocator(DataType* data, int ID)
     {
-        static_assert(false);
+        assert(false);
     }
 
     void Swap(DynamicAllocator& other)
@@ -78,12 +78,12 @@ protected:
 
     StaticAllocator(DataType* data, int ID)
     {
-        static_assert(false);
+        assert(false);
     }
 
     void Allocate(int size) 
     { 
-        static_assert(size <= N); 
+        assert(size <= N); 
     }
 
     void DeAllocate()
@@ -103,6 +103,73 @@ protected:
 public:
     typedef DataType MemberType;
     //using MemberType = DataType;
-    DataType* Data(int idx = 0) { return m_Data + idx; }
-    const DataType* Data(int idx = 0) const { return m_Data + idx; }
+
+    DataType* Data(int idx = 0) 
+    { 
+        return m_Data + idx; 
+    }
+
+    const DataType* Data(int idx = 0) const 
+    { 
+        return m_Data + idx; 
+    }
+};
+
+
+template <typename DataType>
+class SharedAllocator
+{
+private:
+    DataType* m_Data;
+
+protected:
+    SharedAllocator() 
+    { 
+        assert(false); 
+    }
+
+    SharedAllocator(int size) 
+    { 
+        assert(false); 
+    }
+
+    SharedAllocator(DataType* data)
+        : m_Data(data) 
+    { 
+    }
+
+    void Swap(SharedAllocator& other) 
+    { 
+        std::swap(m_Data, other.m_Data); 
+    }
+
+    void Allocate(int size) 
+    { 
+        assert(false); 
+    }
+
+    void DeAllocate() 
+    { 
+    }
+
+    template <typename MatrixType>
+    void InitMatCopy(const MatrixType& src, MatrixType& dest) 
+    {
+        m_Data = src.m_Data;
+    }
+
+    enum { DEFAULT_SIZE = 0 };
+
+public:
+    typedef DataType MemberType;
+
+    DataType* Data(int idx = 0)
+    {
+        return m_Data + idx;
+    }
+
+    const DataType* Data(int idx = 0) const
+    {
+        return m_Data + idx;
+    }
 };
