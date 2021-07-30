@@ -91,6 +91,7 @@
     <ClCompile Include="src\Input\ABAQUSInputObject.cpp" />
     <ClCompile Include="src\Input\ABAQUSInputObjectManager.cpp" />
     <ClCompile Include="src\LinearAlgebra\BLAS_Interface.cpp" />
+    <ClCompile Include="src\LinearAlgebra\Vector.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
@@ -113,10 +114,13 @@
     <ClInclude Include="src\Input\ABAQUSInputModule.h" />
     <ClInclude Include="src\Input\ABAQUSInputObject.h" />
     <ClInclude Include="src\Input\ABAQUSInputObjectManager.h" />
+    <ClInclude Include="src\LinearAlgebra\VectorEvaluation.h" />
     <ClInclude Include="src\LinearAlgebra\ArrayAllocator.h" />
     <ClInclude Include="src\LinearAlgebra\BLAS_Interface.h" />
     <ClInclude Include="src\LinearAlgebra\GPU_BLAS_Interface.h" />
+    <ClInclude Include="src\LinearAlgebra\Range.h" />
     <ClInclude Include="src\LinearAlgebra\Vector.h" />
+    <ClInclude Include="src\LinearAlgebra\VectorCommaAssignment.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\Analysis\ResultOutput.h" />
     <ClInclude Include="src\CmdLineArgumentParser.h" />

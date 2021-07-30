@@ -10,8 +10,7 @@ protected:
 
     ErrorHandler() {}
     ErrorHandler(const std::string& str) 
-        :m_Message(str) 
-    {}
+        :m_Message(str) {}
 
 public:
     void HandleError() { std::cerr << m_Message << std::endl; }
